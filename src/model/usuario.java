@@ -27,7 +27,7 @@ public class usuario {
         return this.nomeCompleto;
     }
 
-    public void setNomeCompleto(){
+    public void setNomeCompleto(String nomeCompleto){
         this.nomeCompleto = nomeCompleto;
     }
 
@@ -36,7 +36,7 @@ public class usuario {
         return this.cpf;
     }
 
-    public void setCpf(){
+    public void setCpf(String cpf){
         this.cpf = cpf;
     }
 
@@ -45,7 +45,7 @@ public class usuario {
         return this.email;
     }
 
-    public void setEmail(){
+    public void setEmail(String email){
         this.email = email;
     }
 
