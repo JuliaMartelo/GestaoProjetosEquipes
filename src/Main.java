@@ -1,5 +1,11 @@
+import view.usuarioView;
+
 public class Main {
     public static void main(String[] args){
-        System.out.println("Iniciando programa!");
+        usuarioView view = new usuarioView();
+
+        view.iniciarMenu();
+        view.cadastrarUsuario();
+        view.listarUsuario();
     }
 }
