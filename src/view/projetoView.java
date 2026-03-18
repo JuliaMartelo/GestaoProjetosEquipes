@@ -8,7 +8,7 @@ public class projetoView {
 
     Scanner scanner = new Scanner(System.in);
 
-    public int mostrarMenu(){
+    public int iniciarMenu(){
 
         System.out.println("\n--- MENU PROJETOS ---");
         System.out.println("1 - Cadastrar projeto");

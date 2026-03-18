@@ -8,7 +8,7 @@ public class equipeView {
 
     Scanner scanner = new Scanner(System.in);
 
-    public int mostrarMenu() {
+    public int iniciarMenu() {
 
         System.out.println("\n--- MENU EQUIPES ---");
         System.out.println("1 - Cadastrar equipe");

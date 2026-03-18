@@ -19,7 +19,7 @@ public class usuarioView {
             System.out.println("\n===== MENU USUÁRIO =====");
             System.out.println("1 - Cadastrar usuário");
             System.out.println("2 - Listar usuários");
-            System.out.println("0 - Sair");
+            System.out.println("0 - Voltar");
 
             System.out.print("Escolha uma opção: ");
             opcao = scanner.nextInt();
