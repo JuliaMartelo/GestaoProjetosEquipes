@@ -1,6 +1,11 @@
 package view;
 
+import controller.equipeController;
+import controller.usuarioController;
 import model.equipe;
+import model.usuario;
+
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -8,26 +13,76 @@ public class equipeView {
 
     Scanner scanner = new Scanner(System.in);
 
-    public int iniciarMenu() {
+    equipeController controller = new equipeController();
 
-        System.out.println("\n--- MENU EQUIPES ---");
-        System.out.println("1 - Cadastrar equipe");
-        System.out.println("2 - Listar equipes");
-        System.out.println("0 - Voltar");
+    public void iniciarMenu() {
 
-        System.out.print("Escolha uma opção: ");
-        return scanner.nextInt();
+        int opcao;
+
+        do{
+            System.out.println("\n--- MENU EQUIPES ---");
+            System.out.println("1 - Cadastrar equipe");
+            System.out.println("2 - Listar equipes");
+            System.out.println("0 - Voltar");
+
+            System.out.print("Escolha uma opção: ");
+            opcao = scanner.nextInt();
+
+            switch (opcao){
+                case 1:
+                    System.out.println("Opção cadastrar selecionada.");
+                    cadastrarEquipe();
+
+                    break;
+
+                case 2:
+                    System.out.println("Opção de listar selecionada");
+                    listarEquipe();
+                    break;
+
+                case 0:
+                    System.out.println("Encerrando sistema...");
+                    break;
+
+                default:
+                    System.out.println("Opção inválida!");
+            }
+        }while(opcao != 0);
+
+
     }
 
-    public String pedirNomeEquipe() {
+    public String cadastrarEquipe() {
 
+        scanner.nextLine(); // limpar
+
+        System.out.println("Digite o nome da equipe: ");
+        String nomeEquipe = scanner.nextLine();
+
+        System.out.println("Digite a descrição da equipe : ");
+        String descricao = scanner.nextLine();
+
+        System.out.println("Quantos membros deseja adicionar?");
+        int qtd = scanner.nextInt();
         scanner.nextLine();
-        System.out.print("Digite o nome da equipe: ");
-        return scanner.nextLine();
+
+        List<usuario> membros = new ArrayList<>();
+
+        for (int i = 0; i < qtd; i++) {
+            System.out.println("Digite o nome do usuário:");
+            String nome = scanner.nextLine();
+
+            usuario u = new usuario(nomeCompleto, cpf, cargo);
+            membros.add(u);
+        }
+
+
+        controller.cadastrarEquipe(nomeEquipe, descricao, membros);
+        return("Cadastrado com sucesso!");
 
     }
 
-    public String pedirDescricaoEquipe() {
+    public String listarEquipe() {
 
         System.out.print("Digite a descrição da equipe: ");
         return scanner.nextLine();

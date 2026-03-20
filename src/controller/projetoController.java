@@ -1,6 +1,10 @@
 package controller;
 
 import model.projeto;
+import model.usuario;
+import view.projetoView;
+
+
 import java.util.ArrayList;
 import java.util.List;
 import java.time.LocalDate;
@@ -8,9 +12,9 @@ import java.time.LocalDate;
 public class projetoController {
     private List <projeto> projetos = new ArrayList<>();
 
-    public void cadastrarProjeto (String nome, String descricao, LocalDate dataInicio, LocalDate dataTerminoPrevista,String status){
+    public void cadastrarProjeto (String nome, String descricao, LocalDate dataInicio, LocalDate dataTerminoPrevista,String status, String gerente){
 
-        projeto novoProjeto = new projeto(nome, descricao, dataInicio, dataTerminoPrevista, status);
+        projeto novoProjeto = new projeto(nome, descricao, dataInicio, dataTerminoPrevista, status, gerente);
 
         projetos.add (novoProjeto);
         System.out.println("Projeto" + nome + "cadastrado com sucesso!");
@@ -23,6 +27,11 @@ public class projetoController {
             }
         }
         return filtrados;
+    }
+
+    public List<projeto> listarProjeto() {
+        return projetos;
+
     }
 }
 

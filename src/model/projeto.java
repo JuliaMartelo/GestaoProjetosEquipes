@@ -8,16 +8,18 @@ public class projeto {
     private LocalDate dataI;
     private LocalDate dataT;
     private String status;
+    private String gerente;
 
 
     //Modo construtor
 
-    public projeto(String nomeProjeto, String descricao, LocalDate dataI, LocalDate dataT, String status){
+    public projeto(String nomeProjeto, String descricao, LocalDate dataI, LocalDate dataT, String status, String gerente){
         this.nomeProjeto = nomeProjeto;
         this.descricao = descricao;
         this.dataI = dataI;
         this.dataT = dataT;
         this.status = status;
+        this.gerente = gerente;
     }
 
     //Getters e Setters
@@ -63,6 +65,14 @@ public class projeto {
 
     public void setStatus(String status){
         this.status = status;
+    }
+
+    public String getGerente(){
+        return this.gerente;
+    }
+
+    public void setGerente(String gerente){
+        this.gerente = gerente;
     }
 
 }

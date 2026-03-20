@@ -19,6 +19,7 @@ public class usuarioController {
     }
 
     public List <usuario>listarUsuario(){
+
         return usuarios;
     }
 
