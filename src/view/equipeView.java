@@ -15,6 +15,7 @@ public class equipeView {
 
     equipeController controller = new equipeController();
 
+
     public void iniciarMenu() {
 
         int opcao;
@@ -70,9 +71,29 @@ public class equipeView {
 
         for (int i = 0; i < qtd; i++) {
             System.out.println("Digite o nome do usuário:");
-            String nome = scanner.nextLine();
+            String nomeCompleto = scanner.nextLine();
 
-            usuario u = new usuario(nomeCompleto, cpf, cargo);
+            System.out.println("Digite o CPF:");
+            String cpf = scanner.nextLine();
+
+            System.out.println("Digite o email:");
+            String email = scanner.nextLine();
+
+            System.out.println("Digite o cargo:");
+            String cargo = scanner.nextLine();
+
+            System.out.println("Digite o login:");
+            String login = scanner.nextLine();
+
+            System.out.println("Digite a senha:");
+            String senha = scanner.nextLine();
+
+            System.out.println("Digite o perfil:");
+            String perfil = scanner.nextLine();
+
+
+
+            usuario u = new usuario (nomeCompleto, cpf , email , cargo, login , senha , perfil);
             membros.add(u);
         }
 

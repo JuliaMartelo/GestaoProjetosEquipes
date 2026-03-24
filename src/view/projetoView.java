@@ -72,6 +72,8 @@ public class projetoView {
         System.out.println("Digite a data de término: ");
         LocalDate dataT = LocalDate.parse(scanner.next());
 
+        scanner.nextLine();
+
         System.out.println("Digite o status do projeto: ");
         String status = scanner.nextLine();
 
